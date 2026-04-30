@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://sxhx1fd88cbt"]
 
-[ext_resource type="Script" uid="uid://bf7a12toj5bns" path="res://doitforme_full/doitforme.gd" id="1_7u6uf"]
-[ext_resource type="Script" uid="uid://ccf477qhtaott" path="res://doitforme_full/Cursor.gd" id="2_5gcv3"]
+[ext_resource type="Script" uid="uid://bf7a12toj5bns" path="res://game_manager/game_runner.gd" id="1_7u6uf"]
+[ext_resource type="Script" uid="uid://ccf477qhtaott" path="res://game_manager/Cursor.gd" id="2_5gcv3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cell"]
 bg_color = Color(0.08, 0.08, 0.18, 1)

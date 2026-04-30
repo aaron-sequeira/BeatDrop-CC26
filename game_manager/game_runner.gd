@@ -26,7 +26,7 @@ const MIN_GAP       := 0.15
 @onready var menu_button    : Button            = $UI/EndScreen/Panel/Margin/VBox/Buttons/MenuButton
 @onready var cursor         : Node2D            = $Cursor
 
-const NoteScene = preload("res://doitforme_full/Note.tscn")
+const NoteScene = preload("res://game_manager/Note.tscn")
 
 var notes         : Array = []
 var note_index    : int   = 0

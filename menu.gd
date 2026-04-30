@@ -1,6 +1,6 @@
 extends Control
 
-const GAME_SCENE := "res://doitforme_full/doitforme.tscn"
+const GAME_SCENE := "res://game_manager/game_runner.tscn"
 
 const SONGS: Array = [
 	{

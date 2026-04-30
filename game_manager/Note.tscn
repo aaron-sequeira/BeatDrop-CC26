@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d04f10bg0p12l"]
 
-[ext_resource type="Script" uid="uid://cd14x8hudc8d7" path="res://doitforme_full/Note.gd" id="1_lqlry"]
-[ext_resource type="Script" uid="uid://obyx7gq2ehi3" path="res://doitforme_full/NoteCircle.gd" id="2_lys1y"]
-[ext_resource type="Script" uid="uid://bnepx3gogbt4s" path="res://doitforme_full/Ring.gd" id="2_xhc6s"]
+[ext_resource type="Script" uid="uid://cd14x8hudc8d7" path="res://game_manager/Note.gd" id="1_lqlry"]
+[ext_resource type="Script" uid="uid://obyx7gq2ehi3" path="res://game_manager/NoteCircle.gd" id="2_lys1y"]
+[ext_resource type="Script" uid="uid://bnepx3gogbt4s" path="res://game_manager/Ring.gd" id="2_xhc6s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1"]
 radius = 38.0
