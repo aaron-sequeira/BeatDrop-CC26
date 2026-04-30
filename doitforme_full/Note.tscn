@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d04f10bg0p12l"]
+
+[ext_resource type="Script" uid="uid://cd14x8hudc8d7" path="res://doitforme_full/Note.gd" id="1_lqlry"]
+[ext_resource type="Script" uid="uid://obyx7gq2ehi3" path="res://doitforme_full/NoteCircle.gd" id="2_lys1y"]
+[ext_resource type="Script" uid="uid://bnepx3gogbt4s" path="res://doitforme_full/Ring.gd" id="2_xhc6s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 38.0
+
+[node name="Note" type="Area2D" unique_id=314014984]
+script = ExtResource("1_lqlry")
+
+[node name="Body" type="Node2D" parent="." unique_id=1987775899]
+script = ExtResource("2_lys1y")
+
+[node name="Ring" type="Node2D" parent="." unique_id=2002517007]
+script = ExtResource("2_xhc6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785295960]
+shape = SubResource("CircleShape2D_1")

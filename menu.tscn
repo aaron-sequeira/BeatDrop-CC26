@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://dbl4u066alb2i"]
+
+[ext_resource type="Script" uid="uid://bljaptlqikkny" path="res://menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://b3iwiclarn6r6" path="res://star.svg" id="2_star"]
+[ext_resource type="Texture2D" uid="uid://bovdjs6w54x4h" path="res://Start-Button-Vector-PNG.png" id="3_start"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.04, 0.045, 0.1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+bg_color = Color(0.09, 0.1, 0.2, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45, 0.3, 0.85, 0.9)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0.5, 0.3, 0.95, 0.35)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_right"]
+bg_color = Color(0.06, 0.07, 0.14, 1)
+border_width_left = 2
+border_color = Color(0.3, 0.32, 0.55, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scroll_bg"]
+bg_color = Color(0.05, 0.06, 0.12, 1)
+
+[node name="Menu" type="Control" unique_id=681530295]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="Panel" parent="." unique_id=949886785]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
+
+[node name="LeftPanel" type="Control" parent="." unique_id=1675081036]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1056.0
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="LeftPanel" unique_id=674595537]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 56.0
+offset_right = 992.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.85, 0.3, 1, 0.55)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 18
+theme_override_font_sizes/font_size = 92
+text = "BEAT DROP"
+
+[node name="SubtitleLabel" type="Label" parent="LeftPanel" unique_id=1134986930]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 158.0
+offset_right = 992.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.78, 0.82, 0.96, 1)
+theme_override_font_sizes/font_size = 28
+text = "Pick a track. Hit the beat."
+
+[node name="StarSprite" type="TextureRect" parent="LeftPanel" unique_id=1647257991]
+modulate = Color(1, 0.78, 0.32, 0)
+layout_mode = 0
+offset_left = 64.0
+offset_top = 84.0
+offset_right = 124.0
+offset_bottom = 144.0
+texture = ExtResource("2_star")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SelectedCard" type="Panel" parent="LeftPanel" unique_id=1226682731]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 240.0
+offset_right = 992.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="Margin" type="MarginContainer" parent="LeftPanel/SelectedCard" unique_id=2075157391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="HBox" type="HBoxContainer" parent="LeftPanel/SelectedCard/Margin" unique_id=1928236081]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Icon" type="TextureRect" parent="LeftPanel/SelectedCard/Margin/HBox" unique_id=1136834645]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="VBoxContainer" parent="LeftPanel/SelectedCard/Margin/HBox" unique_id=200242428]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="EyebrowLabel" type="Label" parent="LeftPanel/SelectedCard/Margin/HBox/Text" unique_id=1692834602]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.55, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "NOW SELECTED"
+
+[node name="Title" type="Label" parent="LeftPanel/SelectedCard/Margin/HBox/Text" unique_id=1425920949]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 44
+text = "—"
+
+[node name="Artist" type="Label" parent="LeftPanel/SelectedCard/Margin/HBox/Text" unique_id=1743477674]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.82, 0.95, 1)
+theme_override_font_sizes/font_size = 24
+text = "—"
+
+[node name="Status" type="Label" parent="LeftPanel/SelectedCard/Margin/HBox/Text" unique_id=931585249]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45, 0.45, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="HighScoreLabel" type="Label" parent="LeftPanel" unique_id=1470776374]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 540.0
+offset_right = 992.0
+offset_bottom = 580.0
+theme_override_colors/font_color = Color(1, 0.85, 0.32, 1)
+theme_override_font_sizes/font_size = 28
+text = "Highest score: 0"
+
+[node name="LastPlayedLabel" type="Label" parent="LeftPanel" unique_id=515680851]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 580.0
+offset_right = 992.0
+offset_bottom = 614.0
+theme_override_colors/font_color = Color(0.78, 0.82, 0.95, 1)
+theme_override_font_sizes/font_size = 22
+text = "Last played: —"
+
+[node name="StartButton" type="Button" parent="LeftPanel" unique_id=432851400]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -200.0
+offset_right = 210.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+flat = true
+
+[node name="StartGraphic" type="TextureRect" parent="LeftPanel/StartButton" unique_id=1048479700]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_start")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightPanel" type="Panel" parent="." unique_id=975802242]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -864.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_right")
+
+[node name="HeaderLabel" type="Label" parent="RightPanel" unique_id=893085940]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 56.0
+offset_right = 800.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "SONGS"
+
+[node name="HintLabel" type="Label" parent="RightPanel" unique_id=1960924067]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 116.0
+offset_right = 800.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.65, 0.7, 0.88, 1)
+theme_override_font_sizes/font_size = 18
+text = "Scroll and click to choose a track."
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RightPanel" unique_id=1670442226]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 168.0
+offset_right = -32.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_scroll_bg")
+horizontal_scroll_mode = 0
+
+[node name="SongList" type="VBoxContainer" parent="RightPanel/ScrollContainer" unique_id=931401058]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
