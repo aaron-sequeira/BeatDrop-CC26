@@ -19,50 +19,50 @@ corner_radius_bottom_left = 4
 bg_color = Color(0, 0, 0, 0.7)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_endpanel"]
-bg_color = Color(0.10, 0.10, 0.20, 0.97)
+bg_color = Color(0.1, 0.1, 0.2, 0.97)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(1.0, 0.38, 0.95, 0.9)
+border_color = Color(1, 0.38, 0.95, 0.9)
 corner_radius_top_left = 22
 corner_radius_top_right = 22
 corner_radius_bottom_right = 22
 corner_radius_bottom_left = 22
-shadow_color = Color(1.0, 0.4, 0.95, 0.55)
+shadow_color = Color(1, 0.4, 0.95, 0.55)
 shadow_size = 22
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
-bg_color = Color(0.18, 0.10, 0.30, 1)
+bg_color = Color(0.18, 0.1, 0.3, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.85, 0.30, 1.0, 0.9)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
-bg_color = Color(0.32, 0.16, 0.50, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1.0, 0.45, 1.0, 1)
+border_color = Color(0.85, 0.3, 1, 0.9)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
-bg_color = Color(0.10, 0.06, 0.18, 1)
+bg_color = Color(0.1, 0.06, 0.18, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1.0, 0.45, 1.0, 1)
+border_color = Color(1, 0.45, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.32, 0.16, 0.5, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.45, 1, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -173,25 +173,25 @@ theme_override_font_sizes/font_size = 28
 text = "0x"
 horizontal_alignment = 1
 
-[node name="Cursor" type="Node2D" parent="." unique_id=894509262]
-script = ExtResource("2_5gcv3")
-
-[node name="EndScreen" type="Control" parent="UI"]
+[node name="EndScreen" type="Control" parent="UI" unique_id=1531783050]
 visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Dim" type="Panel" parent="UI/EndScreen"]
+[node name="Dim" type="Panel" parent="UI/EndScreen" unique_id=1224164692]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dim")
 
-[node name="Panel" type="Panel" parent="UI/EndScreen"]
+[node name="Panel" type="Panel" parent="UI/EndScreen" unique_id=336775649]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -206,107 +206,112 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_endpanel")
 
-[node name="Margin" type="MarginContainer" parent="UI/EndScreen/Panel"]
+[node name="Margin" type="MarginContainer" parent="UI/EndScreen/Panel" unique_id=63900469]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 36
 theme_override_constants/margin_top = 36
 theme_override_constants/margin_right = 36
 theme_override_constants/margin_bottom = 36
 
-[node name="VBox" type="VBoxContainer" parent="UI/EndScreen/Panel/Margin"]
+[node name="VBox" type="VBoxContainer" parent="UI/EndScreen/Panel/Margin" unique_id=426097337]
 layout_mode = 2
 theme_override_constants/separation = 14
 
-[node name="Title" type="Label" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="Title" type="Label" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=1793665402]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 48
 text = "Track Complete!"
 horizontal_alignment = 1
 
-[node name="Grade" type="Label" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="Grade" type="Label" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=74769614]
 layout_mode = 2
-theme_override_colors/font_color = Color(1.0, 0.82, 0.32, 1)
+theme_override_colors/font_color = Color(1, 0.82, 0.32, 1)
 theme_override_font_sizes/font_size = 56
 text = "Grade: —"
 horizontal_alignment = 1
 
-[node name="ScoreLabel" type="Label" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="ScoreLabel" type="Label" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=303871647]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 36
 text = "Score: 0"
 horizontal_alignment = 1
 
-[node name="Accuracy" type="Label" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="Accuracy" type="Label" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=328608946]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85, 0.85, 0.95, 1)
 theme_override_font_sizes/font_size = 26
 text = "Accuracy: 0.0%"
 horizontal_alignment = 1
 
-[node name="Stats" type="HBoxContainer" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="Stats" type="HBoxContainer" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=657468909]
 layout_mode = 2
-alignment = 1
 theme_override_constants/separation = 28
+alignment = 1
 
-[node name="Perfect" type="Label" parent="UI/EndScreen/Panel/Margin/VBox/Stats"]
+[node name="Perfect" type="Label" parent="UI/EndScreen/Panel/Margin/VBox/Stats" unique_id=48581802]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.30, 0.85, 1.0, 1)
+theme_override_colors/font_color = Color(0.3, 0.85, 1, 1)
 theme_override_font_sizes/font_size = 22
 text = "Perfect: 0"
 
-[node name="Good" type="Label" parent="UI/EndScreen/Panel/Margin/VBox/Stats"]
+[node name="Good" type="Label" parent="UI/EndScreen/Panel/Margin/VBox/Stats" unique_id=1702825978]
 layout_mode = 2
-theme_override_colors/font_color = Color(1.0, 0.95, 0.30, 1)
+theme_override_colors/font_color = Color(1, 0.95, 0.3, 1)
 theme_override_font_sizes/font_size = 22
 text = "Good: 0"
 
-[node name="Miss" type="Label" parent="UI/EndScreen/Panel/Margin/VBox/Stats"]
+[node name="Miss" type="Label" parent="UI/EndScreen/Panel/Margin/VBox/Stats" unique_id=72912972]
 layout_mode = 2
-theme_override_colors/font_color = Color(1.0, 0.32, 0.32, 1)
+theme_override_colors/font_color = Color(1, 0.32, 0.32, 1)
 theme_override_font_sizes/font_size = 22
 text = "Miss: 0"
 
-[node name="MaxCombo" type="Label" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="MaxCombo" type="Label" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=1614937195]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.78, 0.82, 0.95, 1)
 theme_override_font_sizes/font_size = 22
 text = "Max Combo: 0x"
 horizontal_alignment = 1
 
-[node name="NewBest" type="Label" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="NewBest" type="Label" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=284422623]
 visible = false
 layout_mode = 2
-theme_override_colors/font_color = Color(1.0, 0.55, 1.0, 1)
+theme_override_colors/font_color = Color(1, 0.55, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "★ New Best!"
 horizontal_alignment = 1
 
-[node name="Buttons" type="HBoxContainer" parent="UI/EndScreen/Panel/Margin/VBox"]
+[node name="Buttons" type="HBoxContainer" parent="UI/EndScreen/Panel/Margin/VBox" unique_id=1420079671]
 layout_mode = 2
-alignment = 1
 theme_override_constants/separation = 24
+alignment = 1
 
-[node name="RetryButton" type="Button" parent="UI/EndScreen/Panel/Margin/VBox/Buttons"]
+[node name="RetryButton" type="Button" parent="UI/EndScreen/Panel/Margin/VBox/Buttons" unique_id=1706488418]
 custom_minimum_size = Vector2(220, 56)
 layout_mode = 2
 focus_mode = 0
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
-theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
 text = "Play Again"
 
-[node name="MenuButton" type="Button" parent="UI/EndScreen/Panel/Margin/VBox/Buttons"]
+[node name="MenuButton" type="Button" parent="UI/EndScreen/Panel/Margin/VBox/Buttons" unique_id=277194683]
 custom_minimum_size = Vector2(220, 56)
 layout_mode = 2
 focus_mode = 0
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
-theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
 text = "Back to Home"
+
+[node name="Cursor" type="Node2D" parent="." unique_id=894509262]
+script = ExtResource("2_5gcv3")

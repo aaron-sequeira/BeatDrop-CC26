@@ -137,14 +137,28 @@ func _load_beatmap(path: String, use_onsets: bool) -> Array:
 			last_t = float(t)
 	var result: Array = []
 	var last_cell := -1
+
+	# Shuffled queue: refill and re-shuffle when empty, never repeat across boundary
+	var queue: Array = []
+
 	for t in filtered:
-		var cell := randi() % 9
-		var tries := 0
-		while cell == last_cell and tries < 10:
-			cell = randi() % 9
-			tries += 1
+		if queue.is_empty():
+			queue = range(9)
+			queue.shuffle()
+			# If the first item in the new batch matches the last cell used, swap it
+			if queue[0] == last_cell:
+				# Find a different position to swap with
+				for i in range(1, queue.size()):
+					if queue[i] != last_cell:
+						var tmp = queue[0]
+						queue[0] = queue[i]
+						queue[i] = tmp
+						break
+
+		var cell: int = queue.pop_front()
 		last_cell = cell
 		result.append({ "time": t, "cell": cell })
+
 	print("[doitforme] %d notes loaded" % result.size())
 	return result
 
