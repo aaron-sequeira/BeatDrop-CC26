@@ -6,7 +6,7 @@ const SONGS: Array = [
 	{
 		"id": "doitforme",
 		"title": "Do It For Me",
-		"artist": "Rosé",
+		"artist": "Glaive",
 		"song_path": "res://assets/songs/doitforme.ogg",
 		"beatmap_path": "res://data/doitforme.json",
 		"icon_path": "res://doitforme.png",
